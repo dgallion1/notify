@@ -19,7 +19,7 @@ import (
 // The buffer have to be DWORD-aligned and, if notify is used in monitoring a
 // directory over the network, its size must not be greater than 64KB. Each of
 // watched directories uses its own buffer for storing events.
-const readBufferSize = 4096
+const readBufferSize = 4096 * 8
 
 // Since all operations which go through the Windows completion routine are done
 // asynchronously, filter may set one of the constants below. They were defined
